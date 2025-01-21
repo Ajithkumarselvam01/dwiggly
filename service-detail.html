@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dwiggly Service</title>
+	<!-- Required css -->
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/owl.theme.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- custom css  -->
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<style>
+.review-card {
+	padding: 16px;
+	border-radius: 8px;
+}
+
+.review-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.review-header img {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	margin-right: 12px;
+}
+
+.review-header h2 {
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.review-meta {
+	font-size: 0.9em;
+	color: #555;
+}
+
+.stars {
+	color: #f4b400;
+	/* gold star color */
+	margin: 0 4px;
+}
+
+.review-content {
+	font-size: 0.95em;
+	line-height: 1.5;
+	color: #333;
+	font-family: Comic Sans MS;
+}
+
+.services-container {
+	max-width: 400px;
+	background-color: #fff8e4;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	font-family: Comic Sans MS;
+}
+
+.services-header {
+	background-color: #fdb065;
+	padding: 10px;
+	border-radius: 10px 10px 0 0;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: black;
+	text-align: center;
+}
+
+.service {
+	margin: 10px 0;
+	padding: 0 10px;
+}
+
+.service p {
+	margin: 5px 0;
+}
+
+.service span {
+	font-weight: bold;
+	color: #333;
+}
+
+.button {
+	background-color: #f48b1d;
+	color: white;
+	padding: 10px;
+	margin: 10px 0;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.button a {
+	color: #fff;
+}
+
+.highlight-box {
+	background-color: #FFD9B0;
+	padding: 15px;
+	border-radius: 5px;
+	margin: 15px 0;
+	font-size: 0.9rem;
+	color: #333;
+}
+
+.icon-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	color: #f48b1d;
+	font-size: 0.9rem;
+	padding: 10px;
+}
+
+.icon-list i {
+	margin-right: 5px;
+	color: #f48b1d;
+}
+
+.profile-section {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.profile-section img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.profile-info h2 {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.reviews {
+	color: #f39c12;
+}
+
+.profile-stats {
+	display: flex;
+	gap: 20px;
+	margin: 10px 0;
+	color: green;
+}
+
+.profile-stats i {
+	margin-right: 5px;
+}
+
+.highlight-box {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.highlight-box i {
+	color: orange;
+	margin-right: 5px;
+}
+
+img {
+	width: 100%;
+}
+
+section.service-banner {
+	background-image: url(image/Service-page-banner.png) !important;
+	padding: 3rem 0 !important;
+}
+
+.why-choose-dw {
+	background-position: center;
+	background-image: url(image/why-choose-dwiggly-service.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	padding: 5rem 0;
+}
+
+.why-choose-dw h2.sub-heading {
+	text-align: center;
+}
+
+.why-choose-dw p.main-content {
+	text-align: center;
+}
+
+.near-vendor h2 {
+	font-size: 28px;
+	padding-bottom: 20px;
+	font-family: Comic Sans MS;
+}
+
+.service-title.text-center {
+	padding: 20px;
+}
+
+.why-cho-sub {
+	background: #fff;
+	border: none;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+section.Commit-oru {
+	background-position: center;
+	background-image: url(image/our-comm-bk-img.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+section.Commit-oru::before {
+	background-image: none;
+}
+
+section.faq-service {
+	background: #fff;
+}
+
+.gallery-container {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 10px;
+}
+
+.gallery-item {
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.Other-vendore-main a.btn {
+	float: right;
+	background: #DD7D17;
+	color: #fff;
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.large {
+	grid-row: span 2;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ser-det-con p {
+	font-size: 20px;
+	padding: 20px 0;
+	font-weight: 500;
+	font-family: Comic Sans MS;
+}
+
+.skill-qu h3 {
+	font-size: 28px;
+	padding-bottom: 20px;
+	font-family: Comic Sans MS;
+	font-weight: 600;
+}
+
+.accept-pet {
+	font-family: Comic Sans MS;
+	margin: 10px 0;
+	border-radius: 5px;
+}
+
+.accept-pet p {
+	padding: 10px;
+	background: #F2F4F7;
+	margin-bottom: 5px;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+section.near-vendor {
+	padding: 20px 0;
+}
+
+.accept-pet span {
+	color: #DD7D17;
+}
+
+.container-skill {
+	text-align: center;
+}
+
+.card-skill {
+	background-color: #fff5e6;
+	background-color: #FFF2DD;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	font-family: Comic Sans MS;
+	width: 200px;
+	margin-right: 15px;
+}
+
+.neigubore p {
+	font-size: 20px;
+	font-family: Comic Sans MS;
+}
+
+.number-skill {
+	background-color: #d88027;
+	color: #fff;
+	border-radius: 5px;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto 10px;
+	font-weight: bold;
+}
+
+.description-skill {
+	font-size: 14px;
+	color: #333;
+	font-weight: 600;
+}
+
+.Accept-type h3 {
+	padding: 10px 0;
+}
+
+.Accept-type {
+	padding: 20px;
+}
+
+.reviews-h2 {
+	font-family: Comic Sans MS;
+}
+
+.review-content p {
+	padding-top: 10px;
+}
+
+.other-vendore .card {
+	font-family: Comic Sans MS;
+}
+
+.other-vendore .owl-dots.disabled {
+	display: none;
+}
+
+.other-vendore .owl-nav.disabled {
+	display: none;
+}
+.Accept-type {
+    padding: 20px;
+    background-image: url(image/Acctep-img.png);
+}
+section.other-vendore {
+	padding: 3rem;
+}
+
+.other-vendore h2.sub-heading {
+	font-family: Comic Sans MS;
+	text-align: center;
+	padding: 10px;
+}
+
+.review-div {
+	width: 50%;
+}
+
+.review-count {
+	display: flex;
+	width: 100%;
+	font-family: Comic Sans MS;
+}
+
+.Write-review {
+	width: 50%;
+}
+
+.Write-review a.btn {
+	float: right;
+	color: #fff;
+	background: #DD7D17;
+}
+
+@media (max-width: 1400px) {}
+
+@media (max-width: 1300px) {}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 1100px) {
+	.card-skill {
+		margin-bottom: 15px;
+	}
+
+	.card-type.col-lg-3 {
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 990px) {}
+
+@media (max-width: 800px) {
+	.services-container {
+		max-width: 100% !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.profile-stats {
+		display: block;
+	}
+
+	.card-skill {
+		width: 100%;
+	}
+
+	.container-skill {
+		padding: 20px;
+	}
+
+	.service p {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 425px) {
+	.near-vendor h2 {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 375px) {}
+</style>
+
+<body>
+	<!-- header sec starts -->
+	<header>
+		<nav class="navbar dwiggy-header navbar-expand-lg ">
+			<!-- nav starts -->
+			<div class="container-fluid">
+				<!-- container starts -->
+				<a class="navbar-brand" href="#"><img src="./image/dwiggy-logo.png" alt=""></a>
+				<!--  -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!--  -->
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<ul class="navbar-nav dwiggyhead-page">
+							<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Our Services</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+						</ul>
+						<div class="login-headbtn">
+							<ul class="navbar-nav">
+								<li class="nav-item vendor"><a class="nav-link" href="#">Login for Vendors</a></li>
+								<li class="nav-item parent"><a class="nav-link" href="#">Login for Pet Parents</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+			</div>
+			<!-- container end -->
+		</nav>
+		<!-- nav end -->
+	</header>
+	<!-- header sec ends -->
+	<section class="near-vendor">
+		<div class="container">
+			<div class="row">
+				<!-- Left Section: Vendor Cards -->
+				<div class="col-lg-8 left-vendor">
+					<div class="profile-section">
+						<img src="image/Service-img.png" alt="Profile Picture">
+						<div class="profile-info">
+							<h2>Lorem ipsum dolor sit consectetur adipiscing elit.</h2>
+							<div>
+								<span class="reviews"> &#9733; &#9733; &#9733; &#9733; &#9733; </span>
+								<span style="color: #000;">500 Reviews</span>
+							</div>
+							<div class="profile-stats">
+								<div class="complte-book mt-3">
+									<i class="fa-solid fa-calendar-check"></i>
+									<span>500 Completed booking</span>
+								</div>
+								<div class="repeate mt-3">
+									<i class="fa-solid fa-repeat"></i>
+									<span>25 Repeated Customers</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="highlight-box" style="background-color: #FFF2DD;">
+						<i class="fa-solid fa-location-dot"></i>
+						<a href="" style="color: #DD7D17;"><span>Lorem ipsum dolor sit amet, consectetur</span></a>
+					</div>
+					<div class="gallery-container">
+						<div class="gallery-item large">
+							<img src="image/Service-det-1.png" alt="Large Image">
+						</div>
+						<div class="gallery-item">
+							<img src="image/Service-det-1.png" alt="Small Image 1">
+						</div>
+						<div class="gallery-item">
+							<img src="image/Service-det-1.png" alt="Small Image 2">
+							<div class="overlay">+9</div>
+						</div>
+					</div>
+					<div class="ser-det-con">
+						<p>At [Your Business Name], we specialize in providing top-tier pet boarding services designed to keep your furry friends safe, happy, and comfortable while you’re away. Our facilities offer a clean, cage-free environment where pets can relax, play, and interact under the care of experienced professionals. Whether it’s a short stay or an extended vacation, we ensure personalized attention tailored to each pet’s unique needs.Whether you have a playful pup, a shy cat, or a senior pet needing special care, our boarding service is designed to ensure they feel loved and cared for at all times. Book your pet’s stay today and enjoy peace of mind knowing they’re in the best hands!</p>
+					</div>
+					<div class="skill-qu">
+						<h3>Skills and qualifications</h3>
+					</div>
+					<div class="container-skill row mt-3 mb-3">
+						<div class="card-skill col-lg-3">
+							<div class="number-skill">1</div>
+							<div class="description-skill">Experience in training</div>
+						</div>
+						<div class="card-skill col-lg-3">
+							<div class="number-skill">2</div>
+							<div class="description-skill">Able to recognise subtle signs of a problem</div>
+						</div>
+						<div class="card-skill col-lg-3">
+							<div class="number-skill">3</div>
+							<div class="description-skill">Some veterinary experience</div>
+						</div>
+						<div class="card-skill col-lg-3">
+							<div class="number-skill">4</div>
+							<div class="description-skill">Basic understanding of how to manage and care for pet</div>
+						</div>
+					</div>
+					<div class="skill-qu">
+						<h3>Accepted Pet Size and Types</h3>
+					</div>
+					<div class="accept-pet">
+						<p>Number of pets that will be watched at one time : <span>02</span></p>
+						<p>Accepted Pet size : <span>1-5kg</span></p>
+						<p>The number of potty breaks provided per day : <span>3-4</span></p>
+						<p>The number of walks provided per day : <span>3+</span></p>
+						<p>The type of home I stay in : <span>Apartment/Condo</span></p>
+						<p>Emergency transport: <span>Yes</span></p>
+					</div>
+					<div class="Accept-type">
+						<div class="skill-qu">
+							<h3>Accepted Pet Types</h3>
+						</div>
+						<div class="container-type row mt-3 mb-3">
+							<div class="card-type col-lg-3">
+								<img src="image/Dog-type.png" alt="">
+							</div>
+							<div class="card-type col-lg-3">
+								<img src="image/Cat-type.png" alt="">
+							</div>
+							<div class="card-type col-lg-3">
+								<img src="image/Rabbits.png" alt="">
+							</div>
+							<div class="card-type col-lg-3">
+								<img src="image/Birds.png" alt="">
+							</div>
+						</div>
+					</div>
+					<hr style="border: 2px solid #8A8A8A;">
+					<div class="neigubore">
+						<div class="skill-qu">
+							<h3>Neighbourhood</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim. Duis eleifend nisl non sagittis molestie.</p>
+						<div class="Location-neg">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497700.1123005915!2d77.30127814132629!3d12.95379021332858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1734523461034!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+						<hr style="border: 1px solid #8A8A8A;">
+						<div class="review-count">
+							<div class="review-div">
+								<p>5 Reviews</p>
+							</div>
+							<div class="Write-review">
+								<a href="#" class="btn">Write a Review</a>
+							</div>
+						</div>
+						<hr style="border: 1px solid #8A8A8A;">
+					</div>
+					<div class="revies-div">
+						<div class="review-card">
+							<div class="review-header">
+								<img src="image/review-img.png" alt="Reviewer Photo">
+								<div class="reviews-h2">
+									<h2>Lorem ipsum dolor sit</h2>
+									<div class="review-meta">
+										<span class="stars">★★★★★</span>
+										<span style="color: #000;">500 Reviews</span>
+										<span> December 2, 2024</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-content">
+								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim. Duis eleifend nisl non sagittis molestie. Vivamus efficitur, dolor id facilisis faucibus, justo velit efficitur neque, vel vehicula nulla ex et neque.</p>
+							</div>
+						</div>
+					</div>
+					<hr style="border: 1px solid #8A8A8A;">
+					<div class="revies-div">
+						<div class="review-card">
+							<div class="review-header">
+								<img src="image/review-img.png" alt="Reviewer Photo">
+								<div class="reviews-h2">
+									<h2>Lorem ipsum dolor sit</h2>
+									<div class="review-meta">
+										<span class="stars">★★★★★</span>
+										<span style="color: #000;">500 Reviews</span>
+										<span> December 2, 2024</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-content">
+								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim. Duis eleifend nisl non sagittis molestie. Vivamus efficitur, dolor id facilisis faucibus, justo velit efficitur neque, vel vehicula nulla ex et neque.</p>
+							</div>
+						</div>
+					</div>
+					<hr style="border: 1px solid #8A8A8A;">
+					<div class="revies-div">
+						<div class="review-card">
+							<div class="review-header">
+								<img src="image/review-img.png" alt="Reviewer Photo">
+								<div class="reviews-h2">
+									<h2>Lorem ipsum dolor sit</h2>
+									<div class="review-meta">
+										<span class="stars">★★★★★</span>
+										<span style="color: #000;">500 Reviews</span>
+										<span> December 2, 2024</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-content">
+								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim. Duis eleifend nisl non sagittis molestie. Vivamus efficitur, dolor id facilisis faucibus, justo velit efficitur neque, vel vehicula nulla ex et neque.</p>
+							</div>
+						</div>
+					</div>
+					<hr style="border: 1px solid #8A8A8A;">
+					<div class="revies-div">
+						<div class="review-card">
+							<div class="review-header">
+								<img src="image/review-img.png" alt="Reviewer Photo">
+								<div class="reviews-h2">
+									<h2>Lorem ipsum dolor sit</h2>
+									<div class="review-meta">
+										<span class="stars">★★★★★</span>
+										<span style="color: #000;">500 Reviews</span>
+										<span> December 2, 2024</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-content">
+								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim. Duis eleifend nisl non sagittis molestie. Vivamus efficitur, dolor id facilisis faucibus, justo velit efficitur neque, vel vehicula nulla ex et neque.</p>
+							</div>
+						</div>
+					</div>
+					<hr style="border: 1px solid #8A8A8A;">
+					<div class="revies-div">
+						<div class="review-card">
+							<div class="review-header">
+								<img src="image/review-img.png" alt="Reviewer Photo">
+								<div class="reviews-h2">
+									<h2>Lorem ipsum dolor sit</h2>
+									<div class="review-meta">
+										<span class="stars">★★★★★</span>
+										<span style="color: #000;">500 Reviews</span>
+										<span> December 2, 2024</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-content">
+								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim. Duis eleifend nisl non sagittis molestie. Vivamus efficitur, dolor id facilisis faucibus, justo velit efficitur neque, vel vehicula nulla ex et neque.</p>
+							</div>
+						</div>
+					</div>
+					<hr style="border: 1px solid #8A8A8A;">
+				</div>
+				<!-- Right Section: Map and Benefits -->
+				<div class="col-lg-4 right-vendore">
+					<div class="services-container">
+						<div class="services-header">Services & Rates</div>
+						<div class="service">
+							<p><strong>Talk & Greet</strong></p>
+							<p><em>Get to Know each other first</em> <span>Free</span></p>
+							<div class="button"><a href="">CONTACT US</a></div>
+						</div>
+						<div class="service">
+							<p><strong>Pet Boarding</strong></p>
+							<p>From Rs.1000/- Per night</p>
+							<div class="button"><a href="mt-2">BOOK NOW</a></div>
+						</div>
+						<div class="highlight-box"> Book via Dwiggly to enjoy Premium Insurance, 24/7 support, booking guarantee, safe cashless payments, photo updates and more! </div>
+						<div class="icon-list">
+							<div><i class="fa-solid fa-calendar-check"></i> 500 Completed booking</div>
+							<div><i class="fa-solid fa-rotate"></i> 25 Repeated Customers</div>
+							<div><i class="fa-solid fa-envelope"></i> Email</div>
+							<div><i class="fa-solid fa-id-card"></i> ID</div>
+						</div>
+					</div>
+				</div>
+				<!-- Benefits Section -->
+			</div>
+		</div>
+	</section>
+	<!-- Faq section -->
+	<section class="faq-section faq-service" style="background-color: #FFF2DD;">
+		<div class="container" style="background-color: #FFF2DD;">
+			<h3 class="sub-heading my-4">Frequently Asked Questions</h3>
+			<div class="faqs-container" itemscope itemtype="https://schema.org/FAQPage" style="background-color: #FFF2DD;">
+				<div class="faqrow-main">
+					<div class="faq-questnum">01</div>
+					<div class="faq-singular" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+						<h2 class="faq-question" itemprop="name">What is the return policy?</h2>
+						<div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+							<div itemprop="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+						</div>
+					</div>
+				</div>
+				<div class="faqrow-main">
+					<div class="faq-questnum">02</div>
+					<div class="faq-singular" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+						<h2 class="faq-question" itemprop="name">How long does it take to process a refund?</h2>
+						<div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+							<div itemprop="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+						</div>
+					</div>
+				</div>
+				<div class="faqrow-main">
+					<div class="faq-questnum">03</div>
+					<div class="faq-singular" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+						<h2 class="faq-question" itemprop="name">What is the policy for late/non-delivery of items ordered online?</h2>
+						<div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+							<div itemprop="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+						</div>
+					</div>
+				</div>
+				<div class="faqrow-main">
+					<div class="faq-questnum">04</div>
+					<div class="faq-singular" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+						<h2 class="faq-question" itemprop="name">Is the product same as shown in pictures?</h2>
+						<div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+							<div itemprop="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+						</div>
+					</div>
+				</div>
+				<div class="faqrow-main">
+					<div class="faq-questnum">05</div>
+					<div class="faq-singular" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+						<h2 class="faq-question" itemprop="name">Is the product same as shown in pictures?</h2>
+						<div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+							<div itemprop="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- other vendor -->
+	<section class="other-vendore">
+		<div class="container">
+			<h2 class="sub-heading">Other Wanders</h2>
+			<div class="Other-vendore-main owl-carousel owl-theme">
+				<div class="item">
+					<div class="card">
+						<img class="card-img-top" src="image/other-vendore-img-1.png" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Lorem ipsum dolor</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in facilisis sapien.</p>
+							<div class="highlight-box-card mt-2">
+								<i class="fa-solid fa-location-dot" style="color: #544E5F;"></i>
+								<a href="" style="color: #544E5F;"><span>Lorem ipsum dolor sit amet, consectetur</span></a>
+							</div>
+							<a href="#" class="btn mt-2">Book Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="card">
+						<img class="card-img-top" src="image/other-vendore-img-2.png" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Lorem ipsum dolor</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in facilisis sapien.</p>
+							<div class="highlight-box-card mt-2">
+								<i class="fa-solid fa-location-dot"></i>
+								<a href="" style="color: #544E5F;"><span>Lorem ipsum dolor sit amet, consectetur</span></a>
+							</div>
+							<a href="#" class="btn mt-2">Book Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="card">
+						<img class="card-img-top" src="image/other-vendore-img-3.png" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Lorem ipsum dolor</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in facilisis sapien.</p>
+							<div class="highlight-box-card mt-2">
+								<i class="fa-solid fa-location-dot"></i>
+								<a href="" style="color: #544E5F;"><span>Lorem ipsum dolor sit amet, consectetur</span></a>
+							</div>
+							<a href="#" class="btn mt-2">Book Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Get in touch section start -->
+	<section class="get-touch-section py-5">
+		<div class="container">
+			<div class="get-touch-main-div">
+				<div class="git-contant git-sub">
+					<h6 class="sub-title">Get in touch </h6>
+					<h3 class="sub-heading">Lorem ipsum dolor sit amet, adipiscing elit.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod blandit. Nunc elit enim, vestibulum in commodo id, varius sagittis nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod blandit. Nunc elit enim, vestibulum in commodo id, varius sagittis nibh.</p>
+				</div>
+				<div class="git-form git-sub">
+					<div class="form-container">
+						<form action="/submit_form" method="post">
+							<div class="first-form">
+								<input type="text" id="name" name="name" placeholder="Name" required>
+								<input type="email" id="email" name="email" placeholder="Email" required>
+							</div>
+							<input type="tel" id="phone" name="phone" maxlength="1" placeholder="Phone" required>
+							<input type="text" id="subject" name="subject" placeholder="Subject" required>
+							<textarea id="message" name="message" placeholder="Message" required></textarea>
+							<br>
+							<button type="submit" class="submit-btn">Submit Now</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Get in touch section  end -->
+	<!-- Footer section -->
+	<section class="footer">
+		<div class="container">
+			<div class="footer-main">
+				<!-- 1 -->
+				<div class="shop-location">
+				</div>
+				<!-- 2 -->
+				<div class="dwiggly-contact row">
+					<!-- 1 -->
+					<div class="col-lg-5 footer-page">
+						<img src="./image/footer-logo.png" alt="">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod blandit. Nunc elit enim, vestibulum in commodo id, varius sagittis nibh. Aliquam enim est, condimentum ut consectetur ac, mollis et enim. </p>
+						<div class="call-footbtn">
+							<img src="./image/footer-question.png" alt="">
+							<div class="quest-call">
+								<a href="tel:+5689 2589 6325">+5689 2589 6325</a>
+								<p>Got Questions? Call us 24/7</p>
+							</div>
+						</div>
+					</div>
+					<!-- 2 -->
+					<div class="col-lg-2 footer-contact">
+						<h5>About Us</h5>
+						<ul class="list-unstyled mb-0">
+							<li><a href="#" title="Home">Home</a></li>
+							<li><a href="#" title="About">About</a></li>
+							<li><a href="#" title="Services">Services</a></li>
+							<li><a href="#" title="Pricing">Pricing</a></li>
+						</ul>
+					</div>
+					<!-- 3 -->
+					<div class="col-lg-2 footer-nearlocat">
+						<h5>Quick Link</h5>
+						<ul class="list-unstyled mb-0">
+							<li><a href="#" title="FAQ">FAQ</a></li>
+							<li><a href="#" title="Contact">Contact</a></li>
+							<li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+							<li><a href="#" title="Terms & Conditions">Terms & Conditions</a></li>
+						</ul>
+					</div>
+					<!-- 4 -->
+					<div class="col-lg-3 footer-follow">
+						<h5>Contact</h5>
+						<p><span><img src="./image/call-icon.png" alt=""></span><a href="#">123-456-7890</a></p>
+						<p><span><img src="./image/mail-icon.png" alt=""></span><a href="#">hello@dwiggly.com</a></p>
+						<p><span><img src="./image/locat-icon.png" alt=""></span>123 Anywhere St., Any City, ST 12345 </p>
+						<div class="social-icon">
+							<i class="fa-brands fa-facebook-f"></i>
+							<i class="fa-brands fa-twitter"></i>
+							<i class="fa-brands fa-instagram"></i>
+						</div>
+					</div>
+					<!--  -->
+				</div>
+			</div>
+		</div>
+		<div class="foot-copyryt">
+			<p>Copyright © 2024</p>
+		</div>
+	</section>
+	<script>
+	function openTab(event, tabId) {
+		// Hide all filter sections
+		let filters = document.querySelectorAll('.filters');
+		filters.forEach(filter => filter.classList.remove('active'));
+		// Remove 'active' class from all tabs
+		let tabs = document.querySelectorAll('.tab');
+		tabs.forEach(tab => tab.classList.remove('active'));
+		// Show the selected filter section
+		let activeFilter = document.getElementById(tabId);
+		if(activeFilter) activeFilter.classList.add('active');
+		// Highlight the clicked tab
+		event.currentTarget.classList.add('active');
+	}
+	// Set default active tab on page load
+	document.addEventListener('DOMContentLoaded', () => {
+		document.querySelector('.tab').click();
+	});
+	</script>
+	<!-- section 10 end -->
+	<!-- <script type="text/javascript" src="js/jquery-3.6.4.slim.min.js"></script> -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/myscript.js"></script>
+</body>
+
+</html>
