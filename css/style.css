@@ -66,11 +66,12 @@
     overflow:hidden;
   }
   .sub-heading {
-    font-family: "Archivo-bold";
-    font-weight: 700;
+    font-family: coiny;
+    font-weight: 600;
     color: #180a32;
     margin: 15px 0;
-  }
+    line-height: 40px;
+}
   h6.sub-title {
     color: #dd7d17;
     letter-spacing: 3px;
@@ -320,6 +321,9 @@
   .Home-banner .item {
     width: 100%;
   }
+  section.subscribe-section {
+    overflow: unset;
+}
   .Home-banner .item h2 {
     font-family: "Archivo-Bold";
     margin-bottom: 20px;
@@ -1033,10 +1037,11 @@ section.About-us-banner {
     cursor: pointer;
     margin: 0;
     padding: 25px 25px 25px 0px;
-    font-weight: 700;
-    font-size: 24px;
-    font-family: "Archivo-SemiBold";
-  }
+    font-weight: 500;
+    font-size: 30px;
+    font-family: 'Coiny';
+    letter-spacing: 1px;
+}
   .faq-singular .faq-question:before {
     position: absolute;
     content: "+";
@@ -1061,7 +1066,10 @@ section.About-us-banner {
   .faqs-container .faq-answer {
     display: none;
     padding-bottom: 20px;
-  }
+    font-family: Comic sans ms;
+    font-weight: 400;
+    font-size: 18px;
+}
   .faqs-container .faq-questnum {
     color: #3c3c4380;
     font-size: 50px;
