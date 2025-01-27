@@ -1,1121 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Dwiggly Service</title>
-	<!-- Required css -->
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/owl.carousel.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/owl.theme.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<!-- custom css  -->
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
-</head>
-<style>
-   img{
-      width: 100%;
-   }
-section.service-banner {
-	background-image: url(image/Service-page-banner.png) !important;
-	padding: 3rem 0 !important;
-}
-
-.why-choose-dw {
-	background-position: center;
-	background-image: url(image/why-choose-dwiggly-service.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	position: relative;
-	padding: 5rem 0;
-}
-
-.why-choose-dw h2.sub-heading {
-	text-align: center;
-}
-
-.why-choose-dw p.main-content {
-	text-align: center;
-}
-.near-vendor h2 {
-    font-size: 28px;
-    padding-bottom: 20px;
-	font-family: Comic Sans MS;
-}
-
-.service-title.text-center {
-	padding: 20px;
-}
-
-.why-cho-sub {
-	background: #fff;
-	border: none;
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-section.Commit-oru {
-	background-position: center;
-	background-image: url(image/our-comm-bk-img.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	position: relative;
-}
-
-section.Commit-oru::before {
-	background-image: none;
-}
-
-section.faq-service {
-	background: #fff;
-}
-
-.service-banner .owl-dots.disabled {
-	display: none;
-}
-
-.service-banner-cont {
-	padding: 0px !important;
-}
-
-/* Tab Container */
-.tab-container {
-	margin: 30px auto;
-	background: #fff;
-	padding: 20px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-	border-radius: 8px;
-}
-
-/* Tabs */
-.tabs {
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 20px;
-}
-
-.tab {
-	flex: 1;
-	background-color: #fff;
-	color: #DD7D17;
-	border: 2px solid #DD7D17;
-	padding: 10px;
-	margin: 5px;
-	cursor: pointer;
-	border-radius: 5px;
-	font-size: 14px;
-	text-align: center;
-	transition: all 0.3s ease;
-	font-family: Comic Sans MS;
-}
-
-.tab.active {
-	background-color: #DD7D17;
-	color: #fff;
-}
-
-/* Filters Section */
-.filters {
-	display: none;
-	/* Hide all filters by default */
-	margin-top: 20px;
-	flex-wrap: wrap;
-	margin-bottom: 20px;
-}
-
-.filters.active {
-	display: flex;
-	/* Show active tab content */
-}
-
-.filters label {
-	font-weight: 500;
-	display: block;
-	margin-bottom: 10px;
-}
-
-.near-div,
-.pet-type {
-	width: 50%;
-}
-
-.filters select {
-	padding: 8px;
-	border: 2px solid #D9D9D9;
-	border-radius: 5px;
-	width: 99%;
-	cursor: pointer;
-	background: none;
-}
-
-@media (max-width: 1400px) {
-	.vendor-image img {
-    height: 350px;
-}
-}
-@media (max-width: 1200px) {
-	.tab {
-		padding: 5px !important
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Popup Form</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+	<style>
+	body {
+		font-family: Arial, sans-serif;
+		background: #f5f5f5;
 	}
 
-	.tab-container {
-		padding: 10px;
+	.popup-container-1 {
+		display: flex;
+		position: relative;
+		background: white;
+		width: 60%;
+		overflow: hidden;
+		text-align: center;
+		justify-content: space-evenly;
+		margin: auto;
 	}
-}
 
-@media (max-width: 990px) {
-	.tabs {
+	.form-section-1 {
+		width: 55%;
+		padding: 40px;
+		background: white;
+		text-align: center;
+		transform: translateY(30px);
+	}
+
+	.info-box-1 p {
+		margin: 5px;
+	}
+
+	.form-section-1 h2 {
+		color: #002D62;
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+
+	.form-section-1 p {
+		color: #000;
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 25px;
+	}
+
+	.form-section-1 input {
+		width: 100%;
+		padding: 15px;
+		margin: 10px 0;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 16px;
+		box-sizing: border-box;
+	}
+
+	.form-section-1 input::placeholder {
+		color: #999;
+	}
+
+	.subit-btn-1 {
+		background-color: #031D5A;
+		color: white;
+		padding: 15px;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+		border-radius: 5px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.subit-btn-1:hover {
+		background-color: #004A98;
+	}
+
+	.info-section-1 {
+		width: 45%;
+		background: #031D5A;
+		color: white;
+		padding: 40px;
+		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
-	.Service-banner-div {
-		width: 100% !important;
+	.info-box-1 {
+		background: rgba(255, 255, 255, 0.1);
 		padding: 20px;
+		margin: 15px 0;
+		border-radius: 5px;
+		text-align: center;
+		font-size: 18px;
+		font-weight: bold;
+		width: 80%;
 	}
-}
-@media (max-width: 800px) {
-	.vendor-card-wrapper {
-    display: block !important; 
-}
-.price {
-    width: 100% !important;
-}
-.vendor-image img {
-        height: auto;
-    }
-.vendor-image {
-    width: 100%;
-}
-.near-vendor h2 {
-    padding-bottom: 20px;
-}
 
-}
-@media (max-width: 600px) {
-	.Service-banner-div h2 {
-	font-size: 25px !important; 
-}
-.near-vendor h2 {
-    font-size: 20px;
-}
-.stats {
-    display: block !important;
-}
-.stat {
-    margin-bottom: 10px;
-}
-}
-.stat a span {
-    color: #00942C;
-}
-.reviews a {
-    color: #000;
-}
-.price a {
-    color: #fff;
-}
-.Service-banner-div {
-	width: 60%;
-}
-section.near-vendor {
-    padding: 20px;
-}
+	.star-icon {
+		width: 40px;
+		height: 40px;
+		margin-bottom: 10px;
+		padding: 5px;
+		background: #fff;
+	}
 
-.service-banner-cont {
-	width: 100% !important;
-}
+	button.close-popup {
+	    color: #031D59 !important;
+	    background: #fff !important;
+	    font-size: 30px;
+	    font-weight: 600;
+	}
 
-.Service-banner-div p {
-	font-family: 'Comic Sans MS';
-}
+	.close-popup {
+		position: absolute;
+		top: 5px;
+		right: 15px;
+		background: #fff;
+		border: none;
+		font-size: 22px;
+		cursor: pointer;
+		padding: 5px 10px;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	}
 
-.filters select {
-	outline-color: #DD7D17;
-}
+	input[type="submit"] {
+	    color: #fff;
+	    background: #031D5A;
+	}
 
-.filters select:hover {
-	border-color: #DD7D17;
-}
+	@media (max-width: 768px) {
+		.popup-container-1 {
+			display: block;
+			width: 100%;
+		}
 
-.vendor-card {
-	background-color: #FFF8ED;
-	border-radius: 0px 8px 8px 0px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	padding: 20px;
-	color: #333;
-}
+		.form-section-1 {
+			width: 95%;
+			padding: 10px;
+		}
 
-.vendor-card h2 {
-	font-size: 24px;
-    font-size: 28px;
-    margin: 0 0 10px;
-    font-family: 'Coiny';
-    font-weight: 700;
-    color: #180A32;
-    font-family: Comic Sans MS;
-}
-.benefits-section {
-    font-family: Comic Sans MS !important;
-}
-.vendor-card .location {
-	color: #e59b31;
-	font-size: 14px;
-	margin-bottom: 10px;
-}
-.location a span {
-    color: #DD7D17 !important;
-}
-.vendor-card .description {
-	font-size: 14px;
-	margin-bottom: 15px;
-}
-
-.vendor-card .ratings {
-	display: flex;
-	align-items: center;
-	margin-bottom: 10px;
-}
-
-.ratings .stars {
-	color: #ffa726;
-	font-size: 16px;
-	margin-right: 10px;
-}
-
-.reviews {
-	font-size: 14px;
-}
-
-.stats {
-	display: flex;
-	justify-content: space-between;
-	font-size: 14px;
-	margin-bottom: 15px;
-}
-
-.stats .stat {
-	display: flex;
-	align-items: center;
-	color: #28a745;
-}
-
-.stat img {
-	margin-right: 8px;
-   width: 30px;
-}
-
-.price {
-	background-color: #e59b31;
-	color: white;
-	padding: 10px 15px;
-	font-size: 18px;
-	border-radius: 5px;
-	text-align: center;
-	font-weight: bold;
-	width: 50%;
-}
-
-.Near-sub-main {
-	display: flex;
-}
-
-.vendor-card-wrapper {
-	display: flex;
-	width: 100% ;
-   margin-bottom: 30px;
-}
-
-.filters select {
-	color: #DADADA;
-	/* Placeholder color */
-	font-family: Comic Sans MS;
-}
-
-.filters option {
-	color: #000;
-	/* Placeholder color */
-}
-
-.Service-banner-div h2 {
-	font-size: 40px;
-	font-family: 'Coiny';
-	font-weight: 700;
-}
-.Vnder-sub {
-    width: 30%;
-}
-.easy-cancellation h3 {
-    background-color: #ffe6e0;
-    color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 20px;
-}
-
-.benefits-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.benefits-list img {
-    width: 40px;
-    margin-right: 10px;
-}
-
-.benefits-list p {
-    margin: 0;
-    color: #555;
-}
-
-.benefits-list strong {
-    color: #000;
-}
-.map-section a.btn {
-    padding: 10px 0;
-}
-</style>
+		.info-section-1 {
+			width: 100%;
+			padding: 0;
+		}
+	}
+	</style>
+</head>
 
 <body>
-	<!-- header sec starts -->
-	<header>
-		<nav class="navbar dwiggy-header navbar-expand-lg ">
-			<!-- nav starts -->
-			<div class="container-fluid">
-				<!-- container starts -->
-				<a class="navbar-brand" href="#"><img src="./image/dwiggy-logo.png" alt=""></a>
-				<!--  -->
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<!--  -->
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div class="navbar-nav">
-						<ul class="navbar-nav dwiggyhead-page">
-							<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Our Services</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-						</ul>
-						<div class="login-headbtn">
-							<ul class="navbar-nav">
-								<li class="nav-item vendor"><a class="nav-link" href="#">Login for Vendors</a></li>
-								<li class="nav-item parent"><a class="nav-link" href="#">Login for Pet Parents</a></li>
-							</ul>
-						</div>
+	<div class="Main-form-div">
+		<div id="project-popup-form" class="white-popup mfp-hide popup-container-1">
+			<button class="close-popup mfp-close">&times;</button>
+			<div class="form-section-1">
+				<h2>NBR</h2>
+				<p>Discover Insights Into High-rise Apartments On Off Sarjapur Road, Tailored Just For You.</p>
+				<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DKj000008PAOr" class="nbrsalce myform"  method="POST">
+					<input type=hidden name="oid" value="00DKj000008PAOr">
+					<input type=hidden name="retURL" value="http://www.nbrgroup.in/thank-you">
+					<input type="hidden" id="lead_source" name="lead_source" value="Website"/>
+					<input type="text" name="last_name" id="last_name" size="20" type="text" placeholder="Full Name" required/>
+					<input  id="email" maxlength="80" name="email" size="20" type="email" placeholder="Email" required/>
+					<input  id="phone" maxlength="40" name="phone" size="20" type="tel" placeholder="Phone Number" required/>
+					<div class="col-md-12" style="display: none;">
+						<input type="text" id="honeypot" name="honeypot">
 					</div>
-				</div>
-				<!--  -->
+					<div class="g-recaptcha col-md-12" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+					<div class="col-md-12 mt-3">
+						<input type="submit" class="subit-btn-1" name="submit" value="Send Message">
+					</div>
+				</form>
 			</div>
-			<!-- container end -->
-		</nav>
-		<!-- nav end -->
-	</header>
-	<!-- header sec ends -->
-	<!-- banners sec stsrts -->
-	<section class="section dwiggy_bnrsec service-banner">
-		<div class="container">
-			<div class="bner_conts">
-				<div class="home-bannercont service-banner-cont">
-					<div class="container">
-						<div class="Service-banner-div">
-							<div class="item">
-								<h2>Discover 5000+ Pet Sitters Across the Bangalore</h2>
-								<p class="mt-3">Looking for top-notch care for your furry friend? Easily compare the best local pet sitters and connect with trusted companions offering unbeatable services today!</p>
-							</div>
-						</div>
-						<div class="tab-container">
-							<h6 class="sub-title">I am looking for</h6>
-							<!-- Tabs -->
-							<div class="tabs mt-2">
-								<button class="tab active" onclick="openTab(event, 'grooming')"> <img src="image/Pet-grooming.png" alt="">Pet Grooming</button>
-								<button class="tab" onclick="openTab(event, 'boarding')"> <img src="image/pet-boarding.png" alt="">Pet Boarding</button>
-								<button class="tab" onclick="openTab(event, 'merchandising')"> <img src="image/MERCHANDISIN.png" alt="">Merchandising</button>
-								<button class="tab" onclick="openTab(event, 'veterinary')"><img src="image/Veterinary-services-Hover.png" alt="">Veterinary Services</button>
-								<button class="tab" onclick="openTab(event, 'community')"><img src="image/community.png" alt="">Community</button>
-								<button class="tab" onclick="openTab(event, 'adoption')"> <img src="image/Adoption.png" alt="">Adoption</button>
-							</div>
-							<!-- Filters Content -->
-							<div class="filters active mt3" id="grooming">
-								<div class="near-div">
-									<label>Near me in</label>
-									<select>
-										<option>Bangalore</option>
-										<option>Mysore</option>
-										<option>Mangalore</option>
-										<option>Hubli</option>
-										<option>Belgaum</option>
-										<option>Gulbarga</option>
-										<option>Dharwad</option>
-										<option>Udupi</option>
-										<option>Bijapur</option>
-										<option>Bellary</option>
-										<option>Shimoga</option>
-										<option>Tumkur</option>
-										<option>Davangere</option>
-										<option>Bidar</option>
-										<option>Chitradurga</option>
-										<option>Raichur</option>
-										<option>Hassan</option>
-										<option>Kolar</option>
-										<option>Chikmagalur</option>
-										<option>Gadag</option>
-										<option>Mandya</option>
-										<option>Bagalkot</option>
-										<option>Koppal</option>
-										<option>Karwar</option>
-										<option>Haveri</option>
-										<option>Ramanagara</option>
-										<option>Chikkaballapur</option>
-										<option>Yadgir</option>
-									</select>
-								</div>
-								<div class="pet-type">
-									<label>My pet type</label>
-									<select>
-										<option>All Pets</option>
-										<option>Dogs</option>
-										<option>Cats</option>
-										<option>Birds</option>
-									</select>
-								</div>
-							</div>
-							<div class="filters active mt-3" id="boarding">
-								<div class="near-div">
-									<label>Near me in</label>
-									<select>
-										<option>Bangalore</option>
-										<option>Mysore</option>
-										<option>Mangalore</option>
-										<option>Hubli</option>
-										<option>Belgaum</option>
-										<option>Gulbarga</option>
-										<option>Dharwad</option>
-										<option>Udupi</option>
-										<option>Bijapur</option>
-										<option>Bellary</option>
-										<option>Shimoga</option>
-										<option>Tumkur</option>
-										<option>Davangere</option>
-										<option>Bidar</option>
-										<option>Chitradurga</option>
-										<option>Raichur</option>
-										<option>Hassan</option>
-										<option>Kolar</option>
-										<option>Chikmagalur</option>
-										<option>Gadag</option>
-										<option>Mandya</option>
-										<option>Bagalkot</option>
-										<option>Koppal</option>
-										<option>Karwar</option>
-										<option>Haveri</option>
-										<option>Ramanagara</option>
-										<option>Chikkaballapur</option>
-										<option>Yadgir</option>
-									</select>
-								</div>
-								<div class="pet-type">
-									<label>My pet type</label>
-									<select>
-										<option>All Pets</option>
-										<option>Dogs</option>
-										<option>Cats</option>
-										<option>Birds</option>
-									</select>
-								</div>
-							</div>
-							<div class="filters active mt-3" id="merchandising">
-								<div class="near-div">
-									<label>Near me in</label>
-									<select>
-										<option>Bangalore</option>
-										<option>Mysore</option>
-										<option>Mangalore</option>
-										<option>Hubli</option>
-										<option>Belgaum</option>
-										<option>Gulbarga</option>
-										<option>Dharwad</option>
-										<option>Udupi</option>
-										<option>Bijapur</option>
-										<option>Bellary</option>
-										<option>Shimoga</option>
-										<option>Tumkur</option>
-										<option>Davangere</option>
-										<option>Bidar</option>
-										<option>Chitradurga</option>
-										<option>Raichur</option>
-										<option>Hassan</option>
-										<option>Kolar</option>
-										<option>Chikmagalur</option>
-										<option>Gadag</option>
-										<option>Mandya</option>
-										<option>Bagalkot</option>
-										<option>Koppal</option>
-										<option>Karwar</option>
-										<option>Haveri</option>
-										<option>Ramanagara</option>
-										<option>Chikkaballapur</option>
-										<option>Yadgir</option>
-									</select>
-								</div>
-								<div class="pet-type">
-									<label>My pet type</label>
-									<select>
-										<option>All Pets</option>
-										<option>Dogs</option>
-										<option>Cats</option>
-										<option>Birds</option>
-									</select>
-								</div>
-							</div>
-							<div class="filters active mt-3" id="veterinary">
-								<div class="near-div">
-									<label>Near me in</label>
-									<select>
-										<option>Bangalore</option>
-										<option>Mysore</option>
-										<option>Mangalore</option>
-										<option>Hubli</option>
-										<option>Belgaum</option>
-										<option>Gulbarga</option>
-										<option>Dharwad</option>
-										<option>Udupi</option>
-										<option>Bijapur</option>
-										<option>Bellary</option>
-										<option>Shimoga</option>
-										<option>Tumkur</option>
-										<option>Davangere</option>
-										<option>Bidar</option>
-										<option>Chitradurga</option>
-										<option>Raichur</option>
-										<option>Hassan</option>
-										<option>Kolar</option>
-										<option>Chikmagalur</option>
-										<option>Gadag</option>
-										<option>Mandya</option>
-										<option>Bagalkot</option>
-										<option>Koppal</option>
-										<option>Karwar</option>
-										<option>Haveri</option>
-										<option>Ramanagara</option>
-										<option>Chikkaballapur</option>
-										<option>Yadgir</option>
-									</select>
-								</div>
-								<div class="pet-type">
-									<label>My pet type</label>
-									<select>
-										<option>All Pets</option>
-										<option>Dogs</option>
-										<option>Cats</option>
-										<option>Birds</option>
-									</select>
-								</div>
-							</div>
-							<div class="filters active mt-3" id="community">
-								<div class="near-div">
-									<label>Near me in</label>
-									<select>
-										<option>Bangalore</option>
-										<option>Mysore</option>
-										<option>Mangalore</option>
-										<option>Hubli</option>
-										<option>Belgaum</option>
-										<option>Gulbarga</option>
-										<option>Dharwad</option>
-										<option>Udupi</option>
-										<option>Bijapur</option>
-										<option>Bellary</option>
-										<option>Shimoga</option>
-										<option>Tumkur</option>
-										<option>Davangere</option>
-										<option>Bidar</option>
-										<option>Chitradurga</option>
-										<option>Raichur</option>
-										<option>Hassan</option>
-										<option>Kolar</option>
-										<option>Chikmagalur</option>
-										<option>Gadag</option>
-										<option>Mandya</option>
-										<option>Bagalkot</option>
-										<option>Koppal</option>
-										<option>Karwar</option>
-										<option>Haveri</option>
-										<option>Ramanagara</option>
-										<option>Chikkaballapur</option>
-										<option>Yadgir</option>
-									</select>
-								</div>
-								<div class="pet-type">
-									<label>My pet type</label>
-									<select>
-										<option>All Pets</option>
-										<option>Dogs</option>
-										<option>Cats</option>
-										<option>Birds</option>
-									</select>
-								</div>
-							</div>
-							<div class="filters active mt-3" id="adoption">
-								<div class="near-div">
-									<label>Near me in</label>
-									<select>
-										<option>Bangalore</option>
-										<option>Mysore</option>
-										<option>Mangalore</option>
-										<option>Hubli</option>
-										<option>Belgaum</option>
-										<option>Gulbarga</option>
-										<option>Dharwad</option>
-										<option>Udupi</option>
-										<option>Bijapur</option>
-										<option>Bellary</option>
-										<option>Shimoga</option>
-										<option>Tumkur</option>
-										<option>Davangere</option>
-										<option>Bidar</option>
-										<option>Chitradurga</option>
-										<option>Raichur</option>
-										<option>Hassan</option>
-										<option>Kolar</option>
-										<option>Chikmagalur</option>
-										<option>Gadag</option>
-										<option>Mandya</option>
-										<option>Bagalkot</option>
-										<option>Koppal</option>
-										<option>Karwar</option>
-										<option>Haveri</option>
-										<option>Ramanagara</option>
-										<option>Chikkaballapur</option>
-										<option>Yadgir</option>
-									</select>
-								</div>
-								<div class="pet-type">
-									<label>My pet type</label>
-									<select>
-										<option>All Pets</option>
-										<option>Dogs</option>
-										<option>Cats</option>
-										<option>Birds</option>
-									</select>
-								</div>
-							</div>
-						</div>
-					</div>
+			<div class="info-section-1">
+				<div class="info-box-1">
+					<img src="image/building.png" class="star-icon" alt="Building Icon">
+					<p>Premium Residences</p>
+				</div>
+				<div class="info-box-1">
+					<img src="image/land.png" class="star-icon" alt="Land Icon">
+					<p>10 Acres</p>
+				</div>
+				<div class="info-box-1">
+					<img src="image/skyline.png" class="star-icon" alt="Skyline Icon">
+					<p>5 Min From RGA Tech Park & WIPRO SEZ</p>
 				</div>
 			</div>
 		</div>
-	</section>
-	<section class="near-vendor">
-      <div class="container">
-          <div class="row">
-              <!-- Left Section: Vendor Cards -->
-              <div class="col-lg-8">
-				<h2 class="mt-3"><span style="color: #DD7D17 ;">Scroll down</span> to browse 14948 Pet Sitters near you in Bangalore</h2>
-				<div class="ratings d-flex " style="padding: 15px 0;">
-					<div class="stars" style="font-size: 20px;">★★★★★</div>
-					<div class="reviews" style="font-size: 20px;"><a href="#">500 Reviews</a></div>
-				</div>
-                  <!-- Vendor Card 1 -->
-                  <div class="vendor-card-wrapper">
-                      <div class="vendor-image">
-                          <img src="image/vender-img.png" alt="Vendor Image">
-                      </div>
-                      <div class="vendor-card">
-                          <h2>Vendor Name</h2>
-                          <div class="stat location">
-                              <img src="image/location-icon.png" alt="Location Icon">
-                              <a href="#"><span>Lorem ipsum dolor sit amet, consectetur</span></a>
-                          </div>
-                          <div class="description">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim.</p>
-                          </div>
-                          <div class="ratings">
-                              <div class="stars">★★★★★</div>
-                              <div class="reviews"><a href="#">500 Reviews</a></div>
-                          </div>
-                          <div class="stats">
-                              <div class="stat">
-                                  <img src="image/Complted-booking.png">
-                                  <a href=""><span>500 Completed Bookings</span></a>
-                              </div>
-                              <div class="stat">
-                                  <img src="image/Repeated-cusutemers.png">
-                               <a href="">   <span>25 Repeated Customers</span></a>
-                              </div>
-                          </div>
-                          <div class="price"><a href="">₹ 1000/- Per Night</a></div>
-                      </div>
-                  </div>
-  
-                  <div class="vendor-card-wrapper">
-                      <div class="vendor-image">
-                          <img src="image/vender-img-2.png" alt="Vendor Image">
-                      </div>
-                      <div class="vendor-card">
-                          <h2>Vendor Name</h2>
-                          <div class="stat location">
-                              <img src="image/location-icon.png" alt="Location Icon">
-                              <a href="#"><span>Lorem ipsum dolor sit amet, consectetur</span></a>
-                          </div>
-                          <div class="description">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim.</p>
-                          </div>
-                          <div class="ratings">
-                              <div class="stars">★★★★★</div>
-                              <div class="reviews"><a href="#">500 Reviews</a></div>
-                          </div>
-                          <div class="stats">
-                              <div class="stat">
-                                  <img src="image/Complted-booking.png">
-                                  <a href=""><span>500 Completed Bookings</span></a>
-                              </div>
-                              <div class="stat">
-                                  <img src="image/Repeated-cusutemers.png">
-                               <a href="">   <span>25 Repeated Customers</span></a>
-                              </div>
-                          </div>
-                          <div class="price"><a href="">₹ 1000/- Per Night</a></div>
-                      </div>
-                  </div>
-				  <div class="vendor-card-wrapper">
-					<div class="vendor-image">
-						<img src="image/vender-img-2.png" alt="Vendor Image">
-					</div>
-					<div class="vendor-card">
-						<h2>Vendor Name</h2>
-						<div class="stat location">
-							<img src="image/location-icon.png" alt="Location Icon">
-							<a href="#"><span>Lorem ipsum dolor sit amet, consectetur</span></a>
-						</div>
-						<div class="description">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim.</p>
-						</div>
-						<div class="ratings">
-							<div class="stars">★★★★★</div>
-							<div class="reviews"><a href="#">500 Reviews</a></div>
-						</div>
-						<div class="stats">
-							<div class="stat">
-								<img src="image/Complted-booking.png">
-								<a href=""><span>500 Completed Bookings</span></a>
-							</div>
-							<div class="stat">
-								<img src="image/Repeated-cusutemers.png">
-							 <a href="">   <span>25 Repeated Customers</span></a>
-							</div>
-						</div>
-						<div class="price"><a href="">₹ 1000/- Per Night</a></div>
-					</div>
-				</div>
-                  <div class="vendor-card-wrapper">
-                     <div class="vendor-image">
-                         <img src="image/vender-img-3.png" alt="Vendor Image">
-                     </div>
-                     <div class="vendor-card">
-                         <h2>Vendor Name</h2>
-                         <div class="stat location">
-                             <img src="image/location-icon.png" alt="Location Icon">
-                             <a href="#"><span>Lorem ipsum dolor sit amet, consectetur</span></a>
-                         </div>
-                         <div class="description">
-                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim.</p>
-                         </div>
-                         <div class="ratings">
-                             <div class="stars">★★★★★</div>
-                             <div class="reviews"><a href="#">500 Reviews</a></div>
-                         </div>
-                         <div class="stats">
-                             <div class="stat">
-                                 <img src="image/Complted-booking.png">
-                                 <a href=""><span>500 Completed Bookings</span></a>
-                             </div>
-                             <div class="stat">
-                                 <img src="image/Repeated-cusutemers.png">
-                              <a href="">   <span>25 Repeated Customers</span></a>
-                             </div>
-                         </div>
-                         <div class="price"><a href="">₹ 1000/- Per Night</a></div>
-                     </div>
-                 </div>
-                 <div class="vendor-card-wrapper">
-                  <div class="vendor-image">
-                      <img src="image/vender-img-4.png" alt="Vendor Image">
-                  </div>
-                  <div class="vendor-card">
-                      <h2>Vendor Name</h2>
-                      <div class="stat location">
-                          <img src="image/location-icon.png" alt="Location Icon">
-                          <a href="#"><span>Lorem ipsum dolor sit amet, consectetur</span></a>
-                      </div>
-                      <div class="description">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae facilisis enim.</p>
-                      </div>
-                      <div class="ratings">
-                          <div class="stars">★★★★★</div>
-                          <div class="reviews"><a href="#">500 Reviews</a></div>
-                      </div>
-                      <div class="stats">
-                          <div class="stat">
-                              <img src="image/Complted-booking.png">
-                              <a href=""><span>500 Completed Bookings</span></a>
-                          </div>
-                          <div class="stat">
-                              <img src="image/Repeated-cusutemers.png">
-                           <a href="">   <span>25 Repeated Customers</span></a>
-                          </div>
-                      </div>
-                      <div class="price"><a href="">₹ 1000/- Per Night</a></div>
-                  </div>
-              </div>
-  
-                  <!-- Add remaining duplicate cards similarly -->
-              </div>
-  
-              <!-- Right Section: Map and Benefits -->
-              <div class="col-lg-4">
-               <div class="map-section">
-                      <a href="#" class="btn"><img src="image/Location-img.png" alt="Map"></a>
-              </div>
-               <!-- Benefits Section -->
-               <div class="benefits-section">
-                   <!-- Heading with background -->
-                   <div class="easy-cancellation">
-                       <h3>Easy cancelation process. No change fees.</h3>
-                   </div>
-                   
-                   <!-- Description -->
-                   <p>Pay via <span>-----------</span> to enjoy the following benefits.<br>
-                       <a href="#" style="color: #f58142; font-weight: bold;">Learn more here.</a>
-                   </p>
-           
-                   <!-- Benefits List -->
-                   <ul class="benefits-list" style="list-style: none; padding-left: 0;">
-                       <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-                           <img src="image/Free-Premium.png" alt="Protection Icon" style="width: 70px; margin-right: 10px;">
-                           <div>
-                               <strong>Free Premium Protection for your pet</strong>
-                               <p>Enjoy peace of mind with free veterinary coverage for your pet with every booking.</p>
-                           </div>
-                       </li>
-                       <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-                           <img src="image/Payment-protection.png" alt="Payment Icon" style="width: 70px; margin-right: 10px;">
-                           <div>
-                               <strong>Payment Protection</strong>
-                               <p>Payments are only released when bookings are completed without major disputes.</p>
-                           </div>
-                       </li>
-                       <li style="display: flex; align-items: flex-start;">
-                           <img src="image/Reservation-guarantee.png" alt="Reservation Icon" style="width: 70px; margin-right: 10px;">
-                           <div>
-                               <strong>Reservation guarantee</strong>
-                               <p>We help to find a replacement Backer for last minute cancelations or you get a full refund.</p>
-                           </div>
-                       </li>
-                   </ul>
-               </div>
-           </div>
-                  <!-- Benefits Section -->     
-              </div>
-          </div>
-  </section>
-	<!-- Faq section -->
-	<section class="faq-section faq-service">
-		<div class="container">
-			<h3 class="sub-heading my-4">Frequently Asked Questions</h3>
-			<div class="faqs-container" itemscope itemtype="https://schema.org/FAQPage">
-				<div class="faqrow-main">
-					<div class="faq-questnum">01</div>
-					<div class="faq-singular" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-						<h2 class="faq-question" itemprop="name">What is the return policy?</h2>
-						<div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-							<div itemprop="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-						</div>
-					</div>
-				</div>
-				<div class="faqrow-main">
-					<div class="faq-questnum">02</div>
-					<div class="faq-singular" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-						<h2 class="faq-question" itemprop="name">How long does it take to process a refund?</h2>
-						<div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-							<div itemprop="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-						</div>
-					</div>
-				</div>
-				<div class="faqrow-main">
-					<div class="faq-questnum">03</div>
-					<div class="faq-singular" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-						<h2 class="faq-question" itemprop="name">What is the policy for late/non-delivery of items ordered online?</h2>
-						<div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-							<div itemprop="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-						</div>
-					</div>
-				</div>
-				<div class="faqrow-main">
-					<div class="faq-questnum">04</div>
-					<div class="faq-singular" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-						<h2 class="faq-question" itemprop="name">Is the product same as shown in pictures?</h2>
-						<div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-							<div itemprop="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-						</div>
-					</div>
-				</div>
-				<div class="faqrow-main">
-					<div class="faq-questnum">05</div>
-					<div class="faq-singular" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-						<h2 class="faq-question" itemprop="name">Is the product same as shown in pictures?</h2>
-						<div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-							<div itemprop="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Why -choose  -->
-	<section class="why-choose-dw">
-		<div class="container">
-			<div class="service-title text-center ">
-				<h2 class="sub-heading">Why Choose Dwiggly ?</h2>
-				<p class="main-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rutrum elit ante, sed sollicitudin diam gravida vitae. Integer vel urna lorem. Nulla porttitor eu nisl in facilisis. Nam suscipit sapien felis, in blandit est pellentesque vitae. Curabitur vitae vehicula est, at cursus ligula.</p>
-			</div>
-			<div class="card-div-main why-cho-main">
-				<div class="card-sub-1 sub-div-card why-cho-sub">
-					<img src="image/Why-cho-icon-1.png" title="" alt="">
-					<h3>Pet Parents Sign Up</h3>
-					<p class="main-content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rutrum elit ante, sed sollicitudin diam gravida vitae. Integer vel urna lorem. Nulla porttitor eu nisl in facilisis.</p>
-				</div>
-				<div class="card-sub-2 sub-div-card why-cho-sub">
-					<img src="image/Why-cho-icon-2.png" title="" alt="">
-					<h3>Pet Parents Sign Up</h3>
-					<p class="main-content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rutrum elit ante, sed sollicitudin diam gravida vitae. Integer vel urna lorem. Nulla porttitor eu nisl in facilisis.</p>
-				</div>
-				<div class="card-sub-3 sub-div-card why-cho-sub">
-					<img src="image/Why-cho-icon-3.png" title="" alt="">
-					<h3>Pet Parents Sign Up</h3>
-					<p class="main-content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rutrum elit ante, sed sollicitudin diam gravida vitae. Integer vel urna lorem. Nulla porttitor eu nisl in facilisis.</p>
-				</div>
-			</div>
-			<div>
-			</div>
-		</div>
-	</section>
-	<!-- Get in touch section start -->
-	<section class="get-touch-section py-5">
-		<div class="container">
-			<div class="get-touch-main-div">
-				<div class="git-contant git-sub">
-					<h6 class="sub-title">Get in touch </h6>
-					<h3 class="sub-heading">Lorem ipsum dolor sit amet, adipiscing elit.</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod blandit. Nunc elit enim, vestibulum in commodo id, varius sagittis nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod blandit. Nunc elit enim, vestibulum in commodo id, varius sagittis nibh.</p>
-				</div>
-				<div class="git-form git-sub">
-					<div class="form-container">
-						<form action="/submit_form" method="post">
-							<div class="first-form">
-								<input type="text" id="name" name="name" placeholder="Name" required>
-								<input type="email" id="email" name="email" placeholder="Email" required>
-							</div>
-							<input type="tel" id="phone" name="phone" maxlength="1" placeholder="Phone" required>
-							<input type="text" id="subject" name="subject" placeholder="Subject" required>
-							<textarea id="message" name="message" placeholder="Message" required></textarea>
-							<br>
-							<button type="submit" class="submit-btn">Submit Now</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Get in touch section  end -->
-	<!-- Footer section -->
-	<section class="footer">
-		<div class="container">
-			<div class="footer-main">
-				<!-- 1 -->
-				<div class="shop-location">
-				</div>
-				<!-- 2 -->
-				<div class="dwiggly-contact row">
-					<!-- 1 -->
-					<div class="col-lg-5 footer-page">
-						<img src="./image/footer-logo.png" alt="">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus euismod blandit. Nunc elit enim, vestibulum in commodo id, varius sagittis nibh. Aliquam enim est, condimentum ut consectetur ac, mollis et enim. </p>
-						<div class="call-footbtn">
-							<img src="./image/footer-question.png" alt="">
-							<div class="quest-call">
-								<a href="tel:+5689 2589 6325">+5689 2589 6325</a>
-								<p>Got Questions? Call us 24/7</p>
-							</div>
-						</div>
-					</div>
-					<!-- 2 -->
-					<div class="col-lg-2 footer-contact">
-						<h5>About Us</h5>
-						<ul class="list-unstyled mb-0">
-							<li><a href="#" title="Home">Home</a></li>
-							<li><a href="#" title="About">About</a></li>
-							<li><a href="#" title="Services">Services</a></li>
-							<li><a href="#" title="Pricing">Pricing</a></li>
-						</ul>
-					</div>
-					<!-- 3 -->
-					<div class="col-lg-2 footer-nearlocat">
-						<h5>Quick Link</h5>
-						<ul class="list-unstyled mb-0">
-							<li><a href="#" title="FAQ">FAQ</a></li>
-							<li><a href="#" title="Contact">Contact</a></li>
-							<li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
-							<li><a href="#" title="Terms & Conditions">Terms & Conditions</a></li>
-						</ul>
-					</div>
-					<!-- 4 -->
-					<div class="col-lg-3 footer-follow">
-						<h5>Contact</h5>
-						<p><span><img src="./image/call-icon.png" alt=""></span><a href="#">123-456-7890</a></p>
-						<p><span><img src="./image/mail-icon.png" alt=""></span><a href="#">hello@dwiggly.com</a></p>
-						<p><span><img src="./image/locat-icon.png" alt=""></span>123 Anywhere St., Any City, ST 12345 </p>
-						<div class="social-icon">
-							<i class="fa-brands fa-facebook-f"></i>
-							<i class="fa-brands fa-twitter"></i>
-							<i class="fa-brands fa-instagram"></i>
-						</div>
-					</div>
-					<!--  -->
-				</div>
-			</div>
-		</div>
-		<div class="foot-copyryt">
-			<p>Copyright © 2024</p>
-		</div>
-	</section>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 	<script>
-	function openTab(event, tabId) {
-		// Hide all filter sections
-		let filters = document.querySelectorAll('.filters');
-		filters.forEach(filter => filter.classList.remove('active'));
-		// Remove 'active' class from all tabs
-		let tabs = document.querySelectorAll('.tab');
-		tabs.forEach(tab => tab.classList.remove('active'));
-		// Show the selected filter section
-		let activeFilter = document.getElementById(tabId);
-		if(activeFilter) activeFilter.classList.add('active');
-		// Highlight the clicked tab
-		event.currentTarget.classList.add('active');
-	}
-	// Set default active tab on page load
-	document.addEventListener('DOMContentLoaded', () => {
-		document.querySelector('.tab').click();
-	});
-	</script>
-	<!-- section 10 end -->
-	<!-- <script type="text/javascript" src="js/jquery-3.6.4.slim.min.js"></script> -->
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/myscript.js"></script>
-</body>
-
-</html>
+	$(document).ready(function() {
+		if(!sessionStorage.getItem('popupShown')) {
+			setTimeout(function() {
+				$.magnificPopup.open({
+					items: {
+						src: '#project-popup-form',
+						type: 'inline'
+					
